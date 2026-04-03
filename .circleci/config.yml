@@ -4,12 +4,23 @@ jobs:
   build:
     docker:
       - image: cirrusci/flutter
-
+#setting environment 
     steps:
       - checkout
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
+
+
+  apk:
+  
+#setting environment 
+    steps:
+     - run: gradlew/debug
+     
+
+
+  
 
 workflows:
   workflow:
